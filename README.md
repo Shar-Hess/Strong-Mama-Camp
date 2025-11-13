@@ -21,3 +21,4 @@ This is a web-based poster for Strong Mama Camp that can be hosted on GitHub Pag
 
 That's it! Anyone can now access your poster via the link.
 
+# Strong-Mama-Camp
