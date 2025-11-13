@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a1a1a;
             padding: 40px 20px;
             min-height: 100vh;
             display: flex;
@@ -24,12 +24,12 @@
         }
         
         .poster {
-            background: white;
+            background: #ffffff;
             max-width: 1200px;
             width: 100%;
             padding: 60px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
@@ -40,45 +40,47 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 8px;
-            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            height: 6px;
+            background: #000000;
         }
         
         .header {
             text-align: center;
             margin-bottom: 50px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 30px;
         }
         
         .title {
             font-family: 'Montserrat', sans-serif;
             font-size: 72px;
             font-weight: 900;
-            color: #2c3e50;
+            color: #000000;
             margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: -2px;
+            letter-spacing: 2px;
             line-height: 1.1;
         }
         
         .subtitle {
             font-size: 28px;
             font-weight: 700;
-            color: #667eea;
+            color: #000000;
             margin-bottom: 20px;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
         }
         
         .tagline {
             font-size: 22px;
-            color: #7f8c8d;
+            color: #333333;
             font-weight: 600;
             margin-bottom: 10px;
         }
         
         .description {
             font-size: 18px;
-            color: #555;
-            line-height: 1.6;
+            color: #444444;
+            line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -91,19 +93,12 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 32px;
             font-weight: 800;
-            color: #2c3e50;
+            color: #000000;
             margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .section-title::before {
-            content: '';
-            width: 6px;
-            height: 40px;
-            background: linear-gradient(180deg, #ff6b6b, #feca57);
-            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #000000;
+            padding-bottom: 10px;
         }
         
         .features-grid {
@@ -114,13 +109,14 @@
         }
         
         .feature-item {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-            border-radius: 12px;
+            background: #f8f8f8;
+            padding: 25px;
+            border-radius: 0;
             font-size: 16px;
             font-weight: 600;
-            color: #2c3e50;
-            border-left: 4px solid #667eea;
+            color: #000000;
+            border-left: 5px solid #000000;
+            border: 2px solid #000000;
         }
         
         .pricing-container {
@@ -131,9 +127,9 @@
         }
         
         .pricing-tier {
-            background: white;
-            border: 3px solid #e0e0e0;
-            border-radius: 15px;
+            background: #ffffff;
+            border: 3px solid #000000;
+            border-radius: 0;
             padding: 30px;
             transition: all 0.3s ease;
             position: relative;
@@ -141,34 +137,47 @@
         
         .pricing-tier:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
-            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
         .pricing-tier.premium {
-            border-color: #667eea;
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-width: 4px;
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .pricing-tier.premium .tier-name,
+        .pricing-tier.premium .tier-price,
+        .pricing-tier.premium .tier-description {
+            color: #ffffff;
+        }
+        
+        .pricing-tier.premium .tier-description li::before {
+            color: #ffffff;
         }
         
         .tier-name {
             font-family: 'Montserrat', sans-serif;
             font-size: 24px;
             font-weight: 800;
-            color: #2c3e50;
+            color: #000000;
             margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .tier-price {
-            font-size: 32px;
-            font-weight: 700;
-            color: #667eea;
+            font-size: 36px;
+            font-weight: 900;
+            color: #000000;
             margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .tier-description {
             font-size: 15px;
-            color: #555;
-            line-height: 1.6;
+            color: #333333;
+            line-height: 1.8;
         }
         
         .tier-description ul {
@@ -186,16 +195,17 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #000000;
             font-weight: bold;
             font-size: 18px;
         }
         
         .schedule {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #f8f8f8;
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 0;
             margin-top: 20px;
+            border: 2px solid #000000;
         }
         
         .schedule-grid {
@@ -206,47 +216,52 @@
         }
         
         .schedule-item {
-            background: white;
+            background: #ffffff;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 0;
             text-align: center;
             font-weight: 600;
-            color: #2c3e50;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            color: #000000;
+            border: 2px solid #000000;
         }
         
         .schedule-month {
             font-size: 20px;
-            color: #667eea;
+            color: #000000;
             margin-bottom: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
         
         .schedule-theme {
             font-size: 14px;
-            color: #7f8c8d;
+            color: #666666;
             font-weight: 400;
         }
         
         .cta-section {
             text-align: center;
             margin-top: 50px;
-            padding: 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            color: white;
+            padding: 50px 40px;
+            background: #000000;
+            border-radius: 0;
+            color: #ffffff;
         }
         
         .cta-text {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 32px;
+            font-weight: 900;
             margin-bottom: 15px;
             font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         
         .cta-subtext {
             font-size: 20px;
             margin-bottom: 30px;
             opacity: 0.95;
+            font-weight: 600;
         }
         
         .contact-info {
@@ -265,10 +280,9 @@
         }
         
         .highlight {
-            background: linear-gradient(120deg, #feca57 0%, #feca57 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 0.4em;
-            background-position: 0 88%;
+            background: #000000;
+            color: #ffffff;
+            padding: 2px 6px;
         }
         
         .emoji {
@@ -313,6 +327,10 @@
 </head>
 <body>
     <div class="poster">
+        <div style="text-align: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0;">
+            <div style="font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight: 900; color: #000000; letter-spacing: 5px;">180 FITNESS</div>
+            <div style="font-size: 14px; color: #666666; margin-top: 5px; letter-spacing: 2px;">FITNESS ON YOUR TIME</div>
+        </div>
         <div class="header">
             <h1 class="title">💪 STRONG MAMA CAMP</h1>
             <div class="subtitle">6 Weeks • 12 Sessions • Starts January</div>
@@ -374,7 +392,7 @@
         <div class="section">
             <h2 class="section-title">🗓 2025 CAMPS</h2>
             <div class="schedule">
-                <p style="font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+                <p style="font-size: 18px; font-weight: 600; color: #000000; margin-bottom: 15px;">
                     Each camp runs 6 weeks with 2 weeks off for recovery + pop-up classes
                 </p>
                 <div class="schedule-grid">
